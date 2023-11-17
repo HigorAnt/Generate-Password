@@ -46,21 +46,21 @@ function calculateQuality() {
 
     securityIndicatorBarEl.style.width = `${percent}%`;
 
-    if (percent > 69) {
+    if (percent>69) {
         securityIndicatorBarEl.classList.remove("critical");
         securityIndicatorBarEl.classList.remove("warning");
         securityIndicatorBarEl.classList.add("safe");
-    } else if (percent > 50) {
+    } else if (percent>50) {
         securityIndicatorBarEl.classList.remove("critical");
         securityIndicatorBarEl.classList.add("warning");
         securityIndicatorBarEl.classList.remove("safe");
     } else {
-    securityIndicatorBarEl.classList.add("critical");
-    securityIndicatorBarEl.classList.remove("warning");
-    securityIndicatorBarEl.classList.remove("safe");
+        securityIndicatorBarEl.classList.add("critical");
+        securityIndicatorBarEl.classList.remove("warning");
+        securityIndicatorBarEl.classList.remove("safe");
     }
 
-    if (percent >= 100) {
+    if (percent>=100) {
         securityIndicatorBarEl.classList.add("completed");
     } else {
         securityIndicatorBarEl.classList.remove("completed");
@@ -68,15 +68,15 @@ function calculateQuality() {
 }
 
 function calculateFontSize() {
-    if (passwordLength > 45) {
+    if (passwordLength>45) {
         inputEl.classList.remove("font-sm");
         inputEl.classList.remove("font-xs");
         inputEl.classList.add("font-xxs");
-    } else if (passwordLength > 32) {
+    } else if (passwordLength>32) {
         inputEl.classList.remove("font-sm");
         inputEl.classList.add("font-xs");
         inputEl.classList.remove("font-xxs");
-    } else if (passwordLength > 22) {
+    } else if (passwordLength>22) {
         inputEl.classList.add("font-sm");
         inputEl.classList.remove("font-xs");
         inputEl.classList.remove("font-xxs");
