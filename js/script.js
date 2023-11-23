@@ -25,9 +25,9 @@ function generatePassword() {
 
     let password = "";
 
-    for (let i = 0; i < passwordLength; i++) {
+    for (let i=0; i<passwordLength; i++) {
         const randomNumber = Math.floor(Math.random() * chars.length);
-        password += chars.substring(randomNumber, randomNumber + 1);
+        password+=chars.substring(randomNumber, randomNumber+1);
     }
 
     inputEl.value = password;
@@ -38,10 +38,10 @@ function generatePassword() {
 
 function calculateQuality() {
     const percent = Math.round(
-        (passwordLength / 64) * 25 +
-        (upperCaseCheckEl.checked ? 15 : 0) +
-        (numberCheckEl.checked ? 25 : 0) +
-        (symbolCheckEl.checked ? 35 : 0)
+        (passwordLength/64) * 25 +
+        (upperCaseCheckEl.checked?15:0) +
+        (numberCheckEl.checked?25:0) +
+        (symbolCheckEl.checked?35:0)
     );
 
     securityIndicatorBarEl.style.width = `${percent}%`;
